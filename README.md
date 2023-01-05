@@ -17,7 +17,7 @@ Formulários são cada vez mais comuns, quando se busca a captação de dados e 
 * JSX
 * Styled components 
 
-### Site Hospedado no link abaixo 
+### Aplicação Hospedada no link abaixo 
 
 * https://multi-form-382.netlify.app/
 
