@@ -187,3 +187,20 @@ export const Div = styled.div`
     flex-direction: row;
     justify-content: center;
 `
+
+export const Footer = styled.footer`
+
+  background-color: red;
+  width: 100%;
+  height: 15vh;
+  position: relative;
+  margin-top: 35rem;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  flex-direction : row;
+  justify-content: space-between;
+
+  background-color: ${props => props.theme.colors.white};
+
+`

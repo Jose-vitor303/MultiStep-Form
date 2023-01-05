@@ -4,12 +4,13 @@ import useWindowSize from "../../components/WindowSize";
 import PaginationDesktop from "../../components/PaginationDesktop";
 import Pagination from "../../components/Pagination";
 import { useNavigate } from "react-router-dom";
-import { Title, SubTitle, Box, BoxPagination, Content, ButtonDesktopNext, Div} from "../../components/GlobalStyle";
+import { Title, SubTitle, Box, BoxPagination, Content, ButtonDesktopNext, Div, Footer} from "../../components/GlobalStyle";
 
 const Info = () =>{
 
     const size = useWindowSize();
     const navigate = useNavigate();
+    const hasNextButton = true;
     // eslint-disable-next-line
     const [ emptyValue, setEmptyValue] = useState(false);
     const [ form, setForm] = useState({
@@ -64,7 +65,7 @@ const Info = () =>{
 
                             <ButtonDesktopNext type="submit">Next Step</ButtonDesktopNext>
                         </Form>
-                    </BoxInputs>        
+                    </BoxInputs>       
                 </Box>
             ) : (
 
@@ -88,7 +89,13 @@ const Info = () =>{
                     <Identify>Phone Number</Identify>
                     <Input type="tel" required placeholder="e.g +1 234 567 890"/>   
                 </Content>
-                </Div>
+                </Div> 
+
+                <Footer style={{display : "flex", justifyContent : "end"}}>
+                        {hasNextButton === true && (
+                            <Button type="Submit" onClick={()=> navigate("/choice-plan")}>Next Step</Button> 
+                        )}
+                </Footer>
                 </>
             )}
         </>
@@ -138,3 +145,23 @@ const Identify = styled.label`
     color: ${props => props.theme.colors.marineBlue};
 `
 
+const Button = styled.button`
+
+    margin-right: 1rem;
+    padding: 1rem 1.5rem;
+    border: 0;
+    font-weight: 500;
+    border-radius: 6px;
+    font-weight: lighter;
+    cursor: pointer;
+    font-family: 'Ubuntu', sans-serif;
+    color: ${props => props.theme.colors.white};
+    background-color: ${props => props.theme.colors.marineBlue};
+
+    :hover{
+      color: ${props => props.theme.colors.marineBlue};
+      background-color:  ${props => props.theme.colors.white};
+      border: 1px solid ${props => props.theme.colors.marineBlue};
+    }
+
+`
