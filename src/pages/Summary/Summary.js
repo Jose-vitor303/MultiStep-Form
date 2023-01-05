@@ -59,19 +59,18 @@ const Summary = () =>{
                 <Resume>
                   <Title>Finishing up</Title>
                   <SubTitle>Double-check everthing looks OK before confirming</SubTitle>
-                  {items.map((item)=>{
+                  {items.map((item, index)=>{
                     return(
-                      <>
-                        <Buys>
+                      <React.Fragment key={index}>
+                        <Buys key={index}>
                           <div style={{display: "flex", justifyContent: "space-between"}}>
                             <h3>{item[0]} {item[1] ? "(Yearly)" : "(Monthly)"}</h3>
                             <span>${item[1] ? item[2] : item[3]}{item[1] ? "/yr" : "/mo"}</span>
                           </div>
 
-                          {newElements.map((element)=>{
-                            console.log(element)
+                          {newElements.map((element, index)=>{
                             return(
-                            <div style={{display: "flex", justifyContent: "space-between"}}>
+                            <div key={index} style={{display: "flex", justifyContent: "space-between"}}>
                               <Span>{element.title}</Span>
                               <SmallPrice>+${element.price}{element.price < 10 ? "/mo" : "/yr"}</SmallPrice>
                             </div>
@@ -83,7 +82,7 @@ const Summary = () =>{
                             <TotalPrice>${item[1] ? item[2] + sumPrices : item[3] + sumPrices}{item[1] ? "/yr" : "/mo"}</TotalPrice> 
                         </div>
                          
-                      </>
+                      </React.Fragment>
                       )
 
                   })}
@@ -106,19 +105,19 @@ const Summary = () =>{
                   <Content>
                     <Title>Finishing up</Title>
                     <SubTitle>Double-check everthing looks OK before confirming</SubTitle>
-                    {items.map((item)=>{
+                    {items.map((item, index)=>{
 
                       return(
-                      <>
-                        <BuysMobile>
+                      <React.Fragment key={index}>
+                        <BuysMobile key={index}>
                           <div style={{display: "flex", justifyContent: "space-between"}}>
                             <h3>{item[0]} {item[1] ? "(Yearly)" : "(Monthly)"}</h3>
                             <span>${item[1] ? item[2] : item[3]}{item[1] ? "/yr" : "/mo"}</span>
                           </div>
-                          {newElements.map((element)=>{
+                          {newElements.map((element, index)=>{
 
                               return(
-                              <div style={{display: "flex", justifyContent: "space-between"}}>
+                              <div  key={index} style={{display: "flex", justifyContent: "space-between"}}>
                                 <Span>{element.title}</Span>
                                 <SmallPrice>+${element.price}{element.price < 10 ? "/mo" : "/yr"}</SmallPrice>
                               </div>
@@ -130,7 +129,7 @@ const Summary = () =>{
                            <Span style={{color : ""}}>Total (per {item[1] ? "year" : "month"})</Span>
                             <TotalPrice>+${item[1] ? item[2] + sumPrices : item[3] + sumPrices}{item[1] ? "/yr" : "/mo"}</TotalPrice> 
                         </div>
-                      </>
+                      </React.Fragment>
                       )
                     })}
                    

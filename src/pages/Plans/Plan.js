@@ -85,7 +85,7 @@ const Plan = ()=>{
                                 
                                 const {type, monthPrice, yearPrice, image, id, color} = dates;
                                 return(
-                                <SectionDesktop style={{background :`${backgroud[index]}`, border : `1px solid ${border[index]}`}}  onClick={()=>handleClick(index, isToggled, yearPrice, monthPrice, color)}>
+                                <SectionDesktop key={id} style={{background :`${backgroud[index]}`, border : `1px solid ${border[index]}`}}  onClick={()=>handleClick(index, isToggled, yearPrice, monthPrice, color)}>
                                     <img src={image} alt="arcade" />
                                     <div>
                                         <Phase ref={refs[dates.id]}  key={id}>{type}</Phase>
@@ -127,7 +127,7 @@ const Plan = ()=>{
                                 const { yearPrice,monthPrice, type, image, id, color} = dates;
                                 return(
 
-                                    <Section style={{background :`${backgroud[index]}`, border : `1px solid ${border[index]}`}}  onClick={()=>handleClick(index, isToggled, yearPrice, monthPrice, color)}>
+                                    <Section key={id} style={{background :`${backgroud[index]}`, border : `1px solid ${border[index]}`}}  onClick={()=>handleClick(index, isToggled, yearPrice, monthPrice, color)}>
                                         <img src={image} alt="arcade" />
                                         <div>
                                             <Phase ref={refs[dates.id]}  key={id}>{type}</Phase>

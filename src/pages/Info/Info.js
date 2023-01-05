@@ -37,7 +37,6 @@ const Info = () =>{
 
         setForm({...newProp})
 
-        console.log(form);
     }
 
 
