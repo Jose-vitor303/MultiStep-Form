@@ -8,7 +8,7 @@ import Pagination from "../../components/Pagination";
 import styled from "styled-components";
 import data from "../../data/pickAddData"
 import PaginationDesktop from "../../components/PaginationDesktop";
-import { Title, SubTitle, Box, BoxPagination, ButtonNextDesktop, ButtonPrevDesktop } from "../../components/GlobalStyle";
+import { Title, SubTitle, Box, BoxPagination, ButtonNextDesktop, ButtonPrevDesktop, Footer } from "../../components/GlobalStyle";
 
 const PickAdd = ()=>{
 
@@ -200,23 +200,6 @@ const Option = styled.li`
     list-style: none;
 `
 
-
-const Footer = styled.footer`
-
-  background-color: red;
-  width: 100%;
-  height: 15vh;
-  position: relative;
-  margin-top: 30rem;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  flex-direction : row;
-  justify-content: space-between;
-
-  background-color: ${props => props.theme.colors.white};
-
-`
 
 
 const Describe = styled.span`

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Box, BoxPagination, Content, ButtonNextDesktop, ButtonPrevDesktop, Div } from "../../components/GlobalStyle";
+import { Box, BoxPagination, Content, ButtonNextDesktop, ButtonPrevDesktop, Div, Footer} from "../../components/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { Title, SubTitle } from "../../components/GlobalStyle";
 import theme from "../../components/ThemeStyled";
@@ -238,24 +238,6 @@ const SectionDesktop = styled.section`
     padding: 1rem;
     cursor: pointer;
 `
-
-const Footer = styled.footer`
-
-  background-color: red;
-  width: 100%;
-  height: 15vh;
-  position: relative;
-  margin-top: 35rem;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  flex-direction : row;
-  justify-content: space-between;
-
-  background-color: ${props => props.theme.colors.white};
-
-`
-
 
 const Button = styled.button`
 
