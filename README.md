@@ -17,10 +17,12 @@ Formulários são cada vez mais comuns, quando se busca a captação de dados e 
 * JSX
 * Styled components 
 
+### Site Hospedado no link abaixo 
+
+* https://multi-form-382.netlify.app/
+
 ### Layout Mobile
 
 ![redimensionar](https://user-images.githubusercontent.com/79383716/210873255-5d4c4ea5-f318-43f0-b12e-ee74b94a2941.png)
 
-### Site Hospedado no link abaixo 
 
-* https://multi-form-382.netlify.app/
